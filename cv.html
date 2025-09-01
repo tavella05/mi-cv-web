@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currículum - Franco Tavella</title>
+  <meta name="description" content="Currículum web - Franco Tavella" />
+
+  <style>
+    :root{
+      --bg:#f5f7fb; --card:#ffffff; --accent:#0b5cff; --muted:#6b7280; --radius:16px;
+      --maxw:900px;
+      --pad:22px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:linear-gradient(180deg,var(--bg),#eef3ff); color:#111}
+    .wrap{max-width:var(--maxw); margin:36px auto; padding:20px}
+    .card{background:var(--card); border-radius:var(--radius); box-shadow:0 6px 20px rgba(11,92,255,0.06); overflow:hidden}
+
+    header{display:flex; gap:20px; align-items:center; padding:var(--pad)}
+    .avatar img{width:110px; height:110px; border-radius:14px; object-fit:cover}
+    .head-info{flex:1}
+    h1{margin:0;font-size:22px}
+    p.role{margin:6px 0 0;color:var(--muted)}
+
+    .main{display:grid; grid-template-columns:1fr 320px; gap:20px; padding:0 var(--pad) var(--pad)}
+    @media (max-width:880px){.main{grid-template-columns:1fr} .avatar img{width:90px;height:90px}}
+
+    .section{margin-bottom:18px}
+    .section h2{font-size:14px;margin:0 0 10px; color:var(--accent)}
+    .about p{margin:0;color:var(--muted);line-height:1.5}
+
+    .list-item{padding:12px;border-radius:10px;background:#fbfdff;margin-bottom:10px}
+    .item-title{display:flex;justify-content:space-between;align-items:center}
+    .item-title h3{margin:0;font-size:14px}
+    .item-meta{font-size:12px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f5ff;padding:8px 10px;border-radius:999px;font-size:13px}
+
+    aside{padding:var(--pad); border-left:1px solid #f1f3f6}
+    .contact p{margin:6px 0;color:var(--muted)}
+
+    .controls{display:flex;gap:8px; flex-wrap:wrap;}
+    .btn{border:0;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;cursor:pointer}
+    .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,92,255,0.12)}
+
+    footer{padding:12px; text-align:center; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div class="avatar"><img src="foto.jpg" alt="Foto de Franco Tavella"></div>
+        <div class="head-info">
+          <h1>Franco Tavella</h1>
+          <p class="role">Estudiante de Desarrollo de Software</p>
+          <div style="margin-top:8px" class="controls">
+            <button class="btn" id="printBtn">Guardar/Imprimir PDF</button>
+            <button class="btn ghost" id="downloadBtn">Descargar CV (JSON)</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="main">
+        <main>
+          <section class="section about">
+            <h2>Perfil Profesional</h2>
+            <p>Estudiante de Desarrollo de Software con experiencia en desarrollo web y sistemas de gestión. Motivado por la programación y el aprendizaje continuo.</p>
+          </section>
+
+          <section class="section">
+            <h2>Experiencia</h2>
+            <div class="list-item">
+              <div class="item-title">
+                <h3>Trabajo TSBERVIS</h3>
+              </div>
+              <p style="margin-top:8px;color:var(--muted)">Software de sistema de gestión para una empresa de celulares.</p>
+            </div>
+
+            <div class="list-item">
+              <div class="item-title">
+                <h3>Reporte Urbano</h3>
+              </div>
+              <p style="margin-top:8px;color:var(--muted)">Aplicación frontend que consume una API en PHP para registrar y mostrar reportes urbanos (carga de reportes, visualización en grilla y gráficos estadísticos).</p>
+            </div>
+
+            <div class="list-item">
+              <div class="item-title">
+                <h3>Pasantías</h3>
+              </div>
+              <p style="margin-top:8px;color:var(--muted)">Práctica con el Ingeniero en Sistemas Federico Coraglia. Trabajo freelance con aprendizaje de HTML, CSS y JavaScript. Desarrollo de página web personal.</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Educación</h2>
+            <div class="list-item">
+              <div class="item-title">
+                <h3>Tecnicatura Superior en Desarrollo de Software</h3>
+                <div class="item-meta">Instituto Superior Villa del Rosario (2023 — 2025)</div>
+              </div>
+              <p style="margin-top:8px;color:var(--muted)">Cursando el tercer año.</p>
+            </div>
+
+            <div class="list-item">
+              <h3>Curso de Programación 2024</h3>
+            </div>
+          </section>
+        </main>
+
+        <aside>
+          <section class="section contact">
+            <h2>Contacto</h2>
+            <p>📞 3573-498055</p>
+            <p>✉️ tavella18@gmail.com</p>
+            <p>📍 San Martín 756, Calchín, Córdoba</p>
+            <p>💻 github.com/tavella05</p>
+          </section>
+
+          <section class="section">
+            <h2>Habilidades</h2>
+            <div class="skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Visual Basic</span>
+              <span class="skill">C#</span>
+              <span class="skill">SQL Server</span>
+              <span class="skill">Creación de sistemas de gestión</span>
+              <span class="skill">Git y GitHub</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Competencias Blandas</h2>
+            <p style="color:var(--muted)">Comunicación efectiva, Trabajo en equipo, Resolución de problemas, Adaptabilidad</p>
+          </section>
+        </aside>
+      </div>
+
+      <footer>Hecho con ❤️ por Franco Tavella — Publicado en GitHub Pages</footer>
+    </div>
+  </div>
+
+  <script>
+    const cvData = {
+      nombre: "Franco Tavella",
+      edad: 20,
+      rol: "Estudiante de Desarrollo de Software",
+      telefono: "3573-498055",
+      email: "tavella18@gmail.com",
+      github: "https://github.com/tavella05",
+      direccion: "San Martín 756, Calchín, Córdoba",
+      resumen: document.querySelector('.about p').innerText
+    }
+
+    document.getElementById('printBtn').addEventListener('click', ()=> window.print());
+
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const blob = new Blob([JSON.stringify(cvData, null, 2)], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'cv.json'; document.body.appendChild(a); a.click(); a.remove();
+    });
+  </script>
+</body>
+</html>
